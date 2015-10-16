@@ -39,11 +39,9 @@ namespace Lawnmower.BusinessLogic
             switch (facing)
             {
                 case "S":
-                    var newPosition = current - 1;
-                    return (newPosition < 0) ? current : newPosition;
+                    return getPositionAfterNegativeMove(current);
                 case "N":
-                    var newPositionR = current + 1;
-                    return (newPositionR > limit) ? current : newPositionR;
+                    return getPositionAfterPositiveMove(limit, current);
                 default:
                     return current;
             }
@@ -51,7 +49,7 @@ namespace Lawnmower.BusinessLogic
 
         private int getXPosition(int current, int limit, string facing, string instruction)
         {
-            if(instruction != "M")
+            if (instruction != "M")
             {
                 return current;
             }
@@ -59,15 +57,27 @@ namespace Lawnmower.BusinessLogic
             switch (facing)
             {
                 case "W":
-                    var newPosition = current - 1;
-                    return (newPosition < 0) ? current : newPosition;
+                    return getPositionAfterNegativeMove(current);
                 case "E":
-                    var newPositionR = current + 1;
-                    return (newPositionR > limit) ? current : newPositionR;
+                    return getPositionAfterPositiveMove(limit, current);
                 default:
                     return current;
             }
         }
+
+        private int getPositionAfterNegativeMove(int current)
+        {
+            var newPosition = current - 1;
+            return (newPosition < 0) ? current : newPosition;
+        }
+
+        private int getPositionAfterPositiveMove(int limit, int current)
+        {
+            var newPosition = current + 1;
+            return (newPosition > limit) ? current : newPosition;
+        }
+
+
 
         private string GetNewPosition(string position, string positionAction)
         {
