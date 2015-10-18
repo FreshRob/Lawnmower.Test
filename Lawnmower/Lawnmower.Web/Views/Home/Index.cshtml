@@ -1,0 +1,20 @@
+﻿@model Lawnmower.Web.Models.HomeViewModel
+
+<form method="post">
+    @Html.ValidationMessage("Error")<br/>
+    <textarea style="width: 200px; height: 200px"name="LawnmowersInstructions">@Model.LawnmowersInstructions</textarea>
+    <br/><button type="submit"> Submit Instructions </button>
+</form>
+
+
+@if(Model.LawnmowerPositions.Count > 0)
+{
+
+    <ul>
+        @foreach(var mower in Model.LawnmowerPositions)
+        {
+            <li> @mower.X @mower.Y @mower.Facing</li>
+        }
+    </ul>
+
+}

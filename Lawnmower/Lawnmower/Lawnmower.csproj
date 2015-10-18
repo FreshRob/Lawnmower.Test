@@ -43,10 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\InstructionsGenerator.cs" />
     <Compile Include="BusinessLogic\LawnmowerCommander.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Dto\LawnmowerInstructions.cs" />
     <Compile Include="Dto\LawnmowerPosition.cs" />
+    <Compile Include="Interfaces\IInstructionsGenerator.cs" />
     <Compile Include="Interfaces\ILawnmowerCommander.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

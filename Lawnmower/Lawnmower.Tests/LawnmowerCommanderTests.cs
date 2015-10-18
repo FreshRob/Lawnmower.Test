@@ -23,22 +23,22 @@ namespace Lawnmower.Tests
         {
             var instructions = new LawnmowerInstructions
             {
-                BounaryWidth = 5,
+                BoundaryWidth = 5,
                 BoundaryHeight = 5,
                 StartX = 1,
                 StartY = 2,
                 StartDirection = "N",
-                Instructions = new List<string>
+                Instructions = new List<char>
                 {
-                    "L",
-                    "M",
-                    "L",
-                    "M",
-                    "L",
-                    "M",
-                    "L",
-                    "M",
-                    "M"
+                    'L',
+                    'M',
+                    'L',
+                    'M',
+                    'L',
+                    'M',
+                    'L',
+                    'M',
+                    'M'
                 }
             };
 
@@ -54,23 +54,23 @@ namespace Lawnmower.Tests
         {
             var instructions = new LawnmowerInstructions
             {
-                BounaryWidth = 5,
+                BoundaryWidth = 5,
                 BoundaryHeight = 5,
                 StartX = 3,
                 StartY = 3,
                 StartDirection = "E",
-                Instructions = new List<string>
+                Instructions = new List<char>
                 {
-                    "M",
-                    "M",
-                    "R",
-                    "M",
-                    "M",
-                    "R",
-                    "M",
-                    "R",
-                    "R",
-                    "M"
+                    'M',
+                    'M',
+                    'R',
+                    'M',
+                    'M',
+                    'R',
+                    'M',
+                    'R',
+                    'R',
+                    'M'
                 }
             };
 
